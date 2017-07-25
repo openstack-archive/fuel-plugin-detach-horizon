@@ -1,0 +1,24 @@
+#!/bin/bash
+set -eux
+
+. "$(dirname "$(readlink -f "$0")")"/functions.sh
+
+VERSION_FILE="build_version"
+
+# Describe version-depend variables:
+# Add murano packages and some dependencies, from master pkg's repo:
+MURANO_PACKAGES_URLS_DEFAULT="http://mirror.fuel-infra.org/extras/murano-plugin-repos/release/private1-1.3.0/ubuntu/9.0/pool/main/"
+
+MURANO_PACKAGES_URLS=${MURANO_PACKAGES_URLS:-${MURANO_PACKAGES_URLS_DEFAULT}}
+
+for url in ${MURANO_PACKAGES_URLS}; do
+    if wget ${url} -O /dev/null ; then
+      download_package 'deb' "${url}"
+    else
+      echo "WARNING: URL ${url} is broken"
+    fi
+done
+
+
+# generate deb version file
+generate_deb_version_file "${VERSION_FILE}"
