@@ -1,0 +1,12 @@
+- id: 'detach_horizon_public_vip'
+  default_mapping: 'public'
+  properties:
+    subnet: true
+    gateway: false
+    vip:
+       - name: 'public_horizon_vip'
+         namespace: 'haproxy'
+         alias: 'public_horizon_vip'
+         node_roles:
+           - 'horizon'
+           - 'primary-horizon'

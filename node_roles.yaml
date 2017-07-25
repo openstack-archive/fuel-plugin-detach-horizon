@@ -1,0 +1,11 @@
+horizon:
+  name: 'Horizon'
+  description: 'Detached horizon'
+  has_primary: true
+  public_ip_required: true
+  weight: 100
+  conflicts:
+    - controller
+    - compute
+  update_required:
+    - horizon

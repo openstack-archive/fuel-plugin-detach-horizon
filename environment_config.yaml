@@ -1,0 +1,109 @@
+attributes:
+  metadata:
+    label: "Detach Horizon Plugin"
+    weight: 10
+  remote_keystone:
+    type: "text"
+    weight: 12
+    value: ""
+    label: "Remote Keystone IP "
+  login_domains:
+    type: "text"
+    weight: 16
+    value: "['default']"
+    label: "Login Domains"
+  grafana_url:
+    type: "text"
+    weight: 17
+    value: "'https://grafana.example.net'"
+    label: "Grafana url"
+  grafana_user:
+    type: "text"
+    weight: 18
+    value: "'horizon'"
+    label: "Grafana login user"
+  grafana_password:
+    type: "password"
+    weight: 19
+    value: "'grafana'"
+    label: "Grafana user password"
+  grafana_use_ssl:
+    type: "checkbox"
+    weight: 20
+    value: false
+    label: "Use ssl option"
+  kibana_url:
+    type: "text"
+    weight: 21
+    value: "'http://kibana.example.net'"
+    label: "Kibana url"
+  login_domains:
+    type: "text"
+    weight: 22
+    value: "['default']"
+    label: "Login Domains"
+  hidden_roles:
+    type: "text"
+    weight: 23
+    value: "['_member_', 'SwiftOperator', 'ResellerAdmin']"
+    label: "Hide roles in horizon"
+  default_role:
+    type: "text"
+    weight: 24
+    value: "'cloud_user'"
+    label: "Default role in horizon"
+  db_name:
+    type: "text"
+    weight: 25
+    value: "horizon"
+    label: "Database name for reports"
+  db_username:
+    type: "text"
+    weight: 26
+    value: "horizon"
+    label: "Database username"
+  db_password:
+    type: "password"
+    weight: 27
+    value: "horizon"
+    label: "Database user password"
+  db_host:
+    type: "text"
+    weight: 28
+    value: ""
+    label: "Database host"
+  reports_user:
+    type: "text"
+    weight: 30
+    value: "cloud_admin"
+    label: "OpenStack user to collect reports"
+  reports_password:
+    type: "password"
+    weight: 31
+    value: "admin"
+    label: "OpenStack user password"
+  reports_tenant:
+    type: "text"
+    weight: 32
+    value: "admin"
+    label: "OpenStack tenant used to authorize user"
+  ram_allocation_ratio:
+    type: "text"
+    weight: 33
+    value: "1"
+    label: "RAM allocation ratio value"
+  cpu_allocation_ratio:
+    type: "text"
+    weight: 34
+    value: "1"
+    label: "CPU allocation ratio value"
+  disk_allocation_ratio:
+    type: "text"
+    weight: 35
+    value: "1"
+    label: "DISK allocation ratio value"
+  upgrade_horizon_packages:
+    type: "checkbox"
+    weight: 70
+    value: false
+    label: "Upgrade horizon packages"
