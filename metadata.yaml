@@ -1,0 +1,19 @@
+name: fuel-plugin-detach-horizon
+title: Detach Horizon from controller
+version: '1.0.28'
+description: Creates a standalone role for OpenStack Horizon
+fuel_version: ['9.0']
+licenses: ['Apache License, Version 2.0']
+authors: ['Aleksey Nakoryakov <bargool@gmail.com>']
+homepage: 'https://git.openstack.org/openstack/fuel-plugin-detach-horizon'
+groups: [network]
+is_hotpluggable: true
+
+releases:
+  - os: ubuntu
+    version: mitaka-9.0
+    mode: ['ha']
+    deployment_scripts_path: deployment_scripts/
+    repository_path: repositories/ubuntu
+
+package_version: '4.0.0'
